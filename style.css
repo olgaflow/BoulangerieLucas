@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    color: #333;
 }
 
 /* Style pour le titre principal (h1) */
@@ -17,38 +18,36 @@ h1 {
     padding: 20px 0;
 }
 
-/* Style pour la navigation (les onglets) */
+/* --- Navigation --- */
 nav {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Réduit l’écart */
-    margin-bottom: 30px; /* Moins d’espace en bas */
-    max-width: 1000px; /* Limite la largeur */
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1200px;
+    margin: 0 auto 30px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+    justify-content: center;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #8b4513; /* Marron foncé */
-    padding: 8px 15px; /* Réduit le padding */
+    color: #8b4513;
+    padding: 8px 15px;
     border: 2px solid transparent;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.7);
     transition: background-color 0.3s, border-color 0.3s;
-    white-space: nowrap; /* Empêche le chevauchement */
-   
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
-    background-color: rgba(212, 160, 23, 0.3); /* Doré léger */
+    background-color: rgba(212, 160, 23, 0.3);
     border-color: #d4a017;
 }
 
@@ -59,120 +58,34 @@ header {
     z-index: 1000;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 0; /* Réduit le padding */
+    padding: 10px 0;
 }
 
-/* Désactiver le menu collant et le modifier pour les petits écrans */
-@media (max-width: 600px) {
-    header {
-        position: static;
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 5px; /* Moins de padding latéral */
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    nav ul li {
-        margin: 5px 0;
-        width: 100%;
-        text-align: center;
-    }
-    nav ul li a {
-        width: 80%; /* Limite la largeur des liens */
-        box-sizing: border-box; /* Inclut padding dans la largeur */
-    }
-    .section-contenu {
-        flex-direction: column;
-        padding: 20px 2%; /* Réduit le padding latéral */
-        gap: 20px;
-    }
-    .section-contenu img {
-        width: 100%;
-        height: auto;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    .galerie-images {
-        flex-direction: column;
-    }
-    .galerie-images img {
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    .banderole-entete {
-        height: 300px;
-        padding-left: 10%;
-        padding-right: 10%;
-        text-align: center;
-        justify-content: center;
-    }
+/* --- Sections principales --- */
+main {
+    padding: 10px;
 }
 
-/* Style pour l'en-tête de la page avec un fond d'image */
-.banderole-entete {
-    background-image: url('5.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #8b4513;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    text-align: right;
-    padding-left: 40%;
-    padding-right: 5%;
-    position: relative;
-}
-.banderole-entete::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(245, 232, 199, 0.8); /* Beige semi-transparent */
-    z-index: 0;
-}
-.banderole-entete * {
-    position: relative;
-    z-index: 1;
-}
-.banderole-entete h2,
-.banderole-entete p {
-    color: #8b4513;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-}
-.banderole-entete p {
-    text-align: justify;
-}
-.banderole-entete img {
-    display: none;
-}
-
-/* Style pour les sections de contenu */
 .section-contenu {
     display: flex;
     align-items: center;
-    gap: 20px; /* Réduit l’écart */
-    padding: 5px 2%; /* Réduit le padding latéral */
+    gap: 40px;
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 40px auto;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 0 auto;
 }
+
 .layout-image-droite {
     flex-direction: row-reverse;
 }
+
 .layout-image-gauche {
     flex-direction: row;
 }
+
 .section-contenu img {
     flex-shrink: 0;
     width: 350px;
@@ -180,20 +93,91 @@ header {
     object-fit: cover;
     border-radius: 10px;
 }
+
 .section-contenu .texte-contenu {
     flex: 1;
-    max-width: 50%;
 }
-.section-contenu h2 {
+
+h2 {
     text-align: center;
     color: #8b4513;
+    margin-bottom: 20px;
 }
-.section-contenu p {
-    text-align: left; /* Pas de justification pour alléger */
+
+p {
+    text-align: justify;
     line-height: 1.8;
 }
 
-/* Style pour les paragraphes avec effet de cadre doré */
+/* --- Banderole de l'en-tête --- */
+.banderole-entete {
+    background-image: url('images/5.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 40%;
+    padding-right: 5%;
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.banderole-entete .texte-contenu {
+    text-align: right;
+    max-width: 500px;
+}
+
+.banderole-entete::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 232, 199, 0.8);
+    z-index: 0;
+}
+
+.banderole-entete * {
+    position: relative;
+    z-index: 1;
+}
+
+.banderole-entete h2,
+.banderole-entete p {
+    color: #8b4513;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    text-align: justify;
+}
+
+.banderole-entete h2 {
+    text-align: center;
+}
+
+.banderole-entete img {
+    display: none;
+}
+
+/* --- Galerie Photo --- */
+.galerie-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galerie-images img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Paragraphes dorés --- */
 .paragraphe-dore {
     border: 2px solid #d4a017;
     padding: 15px;
@@ -204,22 +188,50 @@ header {
     color: #8b4513;
 }
 
-/* Style pour la galerie photo */
-.galerie-images {
+/* --- Formulaire de contact --- */
+#contact form {
+    max-width: 500px;
+    margin: 20px auto;
     display: flex;
-    justify-content: center;
-    gap: 15px; /* Réduit l’écart */
-    margin-top: 20px; /* Moins d’espace en haut */
-}
-.galerie-images img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Style pour le bouton retour en haut */
+#contact label {
+    text-align: left;
+    color: #8b4513;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#contact button {
+    background-color: #8b4513;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #d4a017;
+}
+
+/* --- Footer & Boutons --- */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d4a017;
+    color: white;
+    margin-top: 30px;
+}
+
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -234,51 +246,76 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
 }
+
 .back-to-top:hover {
     background-color: #DAA520;
 }
 
-/* Style pour le pied de page */
-footer {
-    text-align: center;
-    padding: 15px; /* Réduit le padding */
-    background-color: #d4a017;
-    color: white;
-    margin-top: 30px; /* Moins d’espace en haut */
-}
+/* ================================== */
+/* Responsive Design         */
+/* ================================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
 
-/* Style pour le formulaire */
-#contact form {
-    max-width: 500px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-#contact label {
-    text-align: left;
-    color: #8b4513;
-}
-#contact input, #contact textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.9);
-}
-#contact button {
-    background-color: #8b4513;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#contact button:hover {
-    background-color: #d4a017;
-}
-#contact {
-    background: rgba(245, 232, 199, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .section-contenu {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .section-contenu img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .section-contenu .texte-contenu {
+        max-width: 100%;
+    }
+
+    .banderole-entete {
+        height: 400px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .banderole-entete .texte-contenu {
+        text-align: center;
+    }
+
+    .banderole-entete h2,
+    .banderole-entete p {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .galerie-images {
+        flex-direction: column;
+    }
+
+    .galerie-images img {
+        width: 100%;
+        max-width: 300px;
+    }
 }

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     <title>Boulangerie Lucas</title>
 </head>
@@ -31,8 +30,8 @@
                 <p>Chez nous, la baguette est bien plus qu'un simple pain. C'est le fruit d'une passion et d'un savoir-faire unique, transmis de génération en génération.</p>
                 <p>Elle naît de la rencontre d'une farine d'exception et d'un temps de fermentation parfait, qui lui confère ses arômes si particuliers. À la sortie du four, sa croûte dorée et irrésistiblement croustillante fait place à une mie aérée et fondante en bouche.</p>
                 <p>Chaque bouchée est une invitation à savourer l'authentique tradition. Une pure gourmandise, simplement parfaite.</p>
-
             </div>
+            <img src="images/5.jpg" alt="Photo de la boulangerie">
         </section>
 
         <section id="nos-creations" class="section-contenu layout-image-gauche">
@@ -42,9 +41,7 @@
                 <p>Laissez-vous guider par vos sens et découvrez une symphonie de saveurs. Des éclairs au chocolat intense aux tartelettes aux fruits fraîchement cueillis, en passant par les macarons aux teintes délicates, chaque pâtisserie est une promesse de pur bonheur.</p>
                 <p>Nous croyons que la beauté se déguste. C'est pourquoi chaque pièce est pensée comme une œuvre unique, où la précision du geste rencontre l'audace de la création.</p>
             </div>
-            <img src="images/9.jpg" alt="Nos créations sucrées">
-            <img src="images/8.jpg" alt="Nos créations sucrées">
-            
+            <img src="images/3.jpg" alt="Nos créations sucrées">
         </section>
 
         <section id="nos-patisseries" class="section-contenu layout-image-droite">
@@ -56,7 +53,6 @@
                 <p>Dans notre boulangerie, nous nous engageons à offrir une expérience de dégustation inoubliable, où chaque bouchée est un pur bonheur. Venez découvrir la finesse de notre savoir-faire et laissez-vous surprendre par l'explosion de saveurs de nos créations.</p>
             </div>
             <img src="images/2.jpg" alt="Pâtisseries artisanales">
-            <img src="images/6.jpg" alt="famille">
         </section>
 
         <section id="notre-histoire" class="section-contenu layout-image-gauche">
@@ -66,7 +62,6 @@
                 <p>Aujourd'hui, nous perpétuons cette tradition avec le même amour des matières premières et le même respect pour le travail bien fait, célébrant le goût authentique de notre terroir.</p>
             </div>
             <img src="images/4.jpg" alt="Intérieur de la boulangerie">
-            <img src="images/7.jpg" alt="famille">
         </section>
 
         <section id="galerie-photo">
@@ -90,11 +85,11 @@
             <p class="paragraphe-dore">Une question, une commande spéciale ou juste envie de papoter ? Écrivez-nous, notre équipe vous répondra avec plaisir !</p>
             <form action="https://formspree.io/f/xgvzzpgw" method="POST">
                 <label for="name">Votre Nom :</label>
-                <input type="text" id="name" name="user_name" required>
+                <input type="text" id="name" name="user_name" required autocomplete="name">
                 <label for="email">Votre Email :</label>
-                <input type="email" id="email" name="user_email" required>
+                <input type="email" id="email" name="user_email" required autocomplete="email">
                 <label for="message">Votre Message :</label>
-                <textarea id="message" name="user_message" required></textarea>
+                <textarea id="message" name="user_message" required autocomplete="off"></textarea>
                 <div class="h-captcha" data-sitekey="264a5900-e4a6-4af6-9b2c-971e73749dbc"></div>
                 <button type="submit">Envoyer</button>
             </form>
