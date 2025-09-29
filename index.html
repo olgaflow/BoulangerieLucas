@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <title>Boulangerie Lucas</title>
+</head>
+<body id="top">
+    <header>
+        <h1>Boulangerie Lucas & Co</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#nos-baguettes">Nos Baguettes</a></li>
+                <li><a href="#nos-creations">Nos Créations</a></li>
+                <li><a href="#nos-patisseries">Pâtisseries</a></li>
+                <li><a href="#notre-histoire">Notre Histoire</a></li>
+                <li><a href="#galerie-photo">Galerie</a></li>
+                <li><a href="#engagements">Engagements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="nos-baguettes" class="banderole-entete">
+            <div class="texte-contenu">
+                <h2>Le Secret de notre Baguette</h2>
+                <p>Chez nous, la baguette est bien plus qu'un simple pain. C'est le fruit d'une passion et d'un savoir-faire unique, transmis de génération en génération.</p>
+                <p>Elle naît de la rencontre d'une farine d'exception et d'un temps de fermentation parfait, qui lui confère ses arômes si particuliers. À la sortie du four, sa croûte dorée et irrésistiblement croustillante fait place à une mie aérée et fondante en bouche.</p>
+                <p>Chaque bouchée est une invitation à savourer l'authentique tradition. Une pure gourmandise, simplement parfaite.</p>
+            </div>
+        </section>
+
+        <section id="nos-creations" class="section-contenu layout-image-gauche">
+            <div class="texte-contenu">
+                <h2>Découvrez nos créations</h2>
+                <p>Si notre baguette est le cœur de notre savoir-faire, nos créations ne cessent d'émerveiller les yeux et les papilles. Chaque jour, notre équipe de passionnés s'applique à réinventer la tradition, en puisant son inspiration dans la richesse des saisons et le respect des ingrédients.</p>
+                <p>Laissez-vous guider par vos sens et découvrez une symphonie de saveurs. Des éclairs au chocolat intense aux tartelettes aux fruits fraîchement cueillis, en passant par les macarons aux teintes délicates, chaque pâtisserie est une promesse de pur bonheur.</p>
+                <p>Nous croyons que la beauté se déguste. C'est pourquoi chaque pièce est pensée comme une œuvre unique, où la précision du geste rencontre l'audace de la création.</p>
+            </div>
+            <img src="3.jpg" alt="Nos créations sucrées">
+        </section>
+
+        <section id="nos-patisseries" class="section-contenu layout-image-droite">
+            <div class="texte-contenu">
+                <h2>Explorez nos pâtisseries</h2>
+                <p>L'art de la pâtisserie est une alchimie de délicatesse et de gourmandise. Dans notre atelier, chaque gâteau, chaque chou à la crème et chaque éclair est une ode à la finesse.</p>
+                <p>Nous marions les saveurs classiques et les touches d'originalité pour créer des desserts qui racontent une histoire, sublimant vos moments de plaisir.</p>
+            </div>
+            <img src="2.jpg" alt="Pâtisseries artisanales">
+        </section>
+
+        <section id="notre-histoire" class="section-contenu layout-image-gauche">
+            <div class="texte-contenu">
+                <h2>Notre Histoire</h2>
+                <p>L'histoire de la Boulangerie Lucas & Co est avant tout une histoire de famille. C'est la passion d'un grand-père pour le bon pain qui a allumé la flamme, transmise de génération en génération.</p>
+                <p>Aujourd'hui, nous perpétuons cette tradition avec amour des matières premières et respect pour le travail bien fait, célébrant le goût authentique de notre terroir.</p>
+            </div>
+            <img src="4.jpg" alt="Intérieur de la boulangerie">
+        </section>
+
+        <section id="galerie-photo">
+            <h2>La Galerie Photo</h2>
+            <p class="paragraphe-dore">Plongez dans notre univers à travers des images qui capturent la magie de notre boulangerie. Découvrez nos pains, pâtisseries et l’ambiance chaleureuse de notre atelier.</p>
+            <div class="galerie-images">
+                <img src="2.jpg" alt="Créations sucrées">
+                <img src="4.jpg" alt="Intérieur de la boulangerie">
+                <img src="3.jpg" alt="Pains frais">
+                <img src="5.jpg" alt="Détail d’une pâtisserie">
+            </div>
+        </section>
+
+        <section id="engagements">
+            <h2>Nos Engagements</h2>
+            <p class="paragraphe-dore">Nous nous engageons à utiliser des ingrédients locaux et de saison, à respecter des méthodes artisanales, et à réduire notre impact environnemental. Ouvert tous les jours de 7h à 19h, sauf lundi.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p class="paragraphe-dore">Une question, une commande spéciale ou juste envie de papoter ? Écrivez-nous, notre équipe vous répondra avec plaisir !</p>
+            <form action="https://formspree.io/f/xgvzzpgw" method="POST">
+                <label for="name">Votre Nom :</label>
+                <input type="text" id="name" name="user_name" required>
+                <label for="email">Votre Email :</label>
+                <input type="email" id="email" name="user_email" required>
+                <label for="message">Votre Message :</label>
+                <textarea id="message" name="user_message" required></textarea>
+                <div class="h-captcha" data-sitekey="264a5900-e4a6-4af6-9b2c-971e73749dbc"></div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <a href="#top" class="back-to-top">↑</a>
+</body>
+</html>

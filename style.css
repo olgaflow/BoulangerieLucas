@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Style de base pour la page */
+body {
+    background-color: #f5e8c7; /* Beige chaleureux */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style pour le titre principal (h1) */
+h1 {
+    color: #d4a017; /* Doré plus subtil */
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 3em;
+    padding: 20px 0;
+}
+
+/* Style pour la navigation (les onglets) */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Réduit l’écart */
+    margin-bottom: 30px; /* Moins d’espace en bas */
+    max-width: 1000px; /* Limite la largeur */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8b4513; /* Marron foncé */
+    padding: 8px 15px; /* Réduit le padding */
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s, border-color 0.3s;
+    white-space: nowrap; /* Empêche le chevauchement */
+}
+
+nav ul li a:hover {
+    background-color: rgba(212, 160, 23, 0.3); /* Doré léger */
+    border-color: #d4a017;
+}
+
+/* Rendre le menu collant sur grand écran */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; /* Réduit le padding */
+}
+
+/* Désactiver le menu collant et le modifier pour les petits écrans */
+@media (max-width: 600px) {
+    header {
+        position: static;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5px; /* Moins de padding latéral */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a {
+        width: 80%; /* Limite la largeur des liens */
+        box-sizing: border-box; /* Inclut padding dans la largeur */
+    }
+    .section-contenu {
+        flex-direction: column;
+        padding: 20px 2%; /* Réduit le padding latéral */
+        gap: 20px;
+    }
+    .section-contenu img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .galerie-images {
+        flex-direction: column;
+    }
+    .galerie-images img {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    .banderole-entete {
+        height: 300px;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Style pour l'en-tête de la page avec un fond d'image */
+.banderole-entete {
+    background-image: url('5.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #8b4513;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    padding-left: 40%;
+    padding-right: 5%;
+    position: relative;
+}
+.banderole-entete::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 232, 199, 0.8); /* Beige semi-transparent */
+    z-index: 0;
+}
+.banderole-entete * {
+    position: relative;
+    z-index: 1;
+}
+.banderole-entete h2,
+.banderole-entete p {
+    color: #8b4513;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+.banderole-entete p {
+    text-align: justify;
+}
+.banderole-entete img {
+    display: none;
+}
+
+/* Style pour les sections de contenu */
+.section-contenu {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Réduit l’écart */
+    padding: 5px 2%; /* Réduit le padding latéral */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.layout-image-droite {
+    flex-direction: row-reverse;
+}
+.layout-image-gauche {
+    flex-direction: row;
+}
+.section-contenu img {
+    flex-shrink: 0;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.section-contenu .texte-contenu {
+    flex: 1;
+    max-width: 50%;
+}
+.section-contenu h2 {
+    text-align: center;
+    color: #8b4513;
+}
+.section-contenu p {
+    text-align: left; /* Pas de justification pour alléger */
+    line-height: 1.8;
+}
+
+/* Style pour les paragraphes avec effet de cadre doré */
+.paragraphe-dore {
+    border: 2px solid #d4a017;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    color: #8b4513;
+}
+
+/* Style pour la galerie photo */
+.galerie-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Réduit l’écart */
+    margin-top: 20px; /* Moins d’espace en haut */
+}
+.galerie-images img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le bouton retour en haut */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d4a017;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.back-to-top:hover {
+    background-color: #DAA520;
+}
+
+/* Style pour le pied de page */
+footer {
+    text-align: center;
+    padding: 15px; /* Réduit le padding */
+    background-color: #d4a017;
+    color: white;
+    margin-top: 30px; /* Moins d’espace en haut */
+}
+
+/* Style pour le formulaire */
+#contact form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#contact label {
+    text-align: left;
+    color: #8b4513;
+}
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+#contact button {
+    background-color: #8b4513;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact button:hover {
+    background-color: #d4a017;
+}
+#contact {
+    background: rgba(245, 232, 199, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
