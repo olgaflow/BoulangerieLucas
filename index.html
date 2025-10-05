@@ -9,7 +9,14 @@
 </head>
 <body id="top">
     <header>
-        <h1>Boulangerie Lucas & Co</h1>
+        <h1><a href="#top">Boulangerie Lucas & Co</a></h1>
+        
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav role="navigation">
             <ul>
                 <li><a href="#nos-baguettes">Nos Baguettes</a></li>
@@ -99,5 +106,25 @@
         </section>
     </main>
     <a href="#top" class="back-to-top">↑</a>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('header nav');
+        const navLinks = document.querySelectorAll('header nav ul li a');
+
+        // Ouvre ou ferme le menu au clic sur le bouton
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Ferme le menu quand on clique sur un lien (utile pour les ancres)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
